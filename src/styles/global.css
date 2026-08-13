@@ -119,3 +119,18 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   outline: 2px solid #d97706;
   outline-offset: 2px;
 }
+
+/* Aarav Enterprises Brand Text Colors */
+.text-aarav-gradient {
+  background: linear-gradient(135deg, #e11d48 0%, #c026d3 60%, #7e22ce 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-enterprises-gradient {
+  background: linear-gradient(135deg, #0284c7 0%, #2563eb 50%, #6b21a8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}

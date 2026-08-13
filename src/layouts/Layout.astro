@@ -8,32 +8,32 @@ interface Props {
 }
 
 const {
-  title = "Vanguard Labour Contractor & Manpower Supply | Skilled & Unskilled Workforce",
-  description = "Reliable labour contractor and manpower supply services for construction, industrial, commercial, and infrastructure projects. Fast deployment, verified compliance, and flexible workforce teams.",
+  title = "Aarav Enterprises | Labour Contractor & Manpower Supply",
+  description = "Aarav Enterprises provides reliable labour contractor and manpower supply services for construction, industrial, commercial, and infrastructure projects. Fast deployment, verified compliance, and flexible workforce teams.",
   canonicalUrl = "https://vanguardlabour.com/"
 } = Astro.props;
 
 const schemaData = {
   "@context": "https://schema.org",
   "@type": "GeneralContractor",
-  "name": "Vanguard Labour & Manpower Services",
+  "name": "Aarav Enterprises - Labour & Manpower Services",
   "image": "https://vanguardlabour.com/og-image.jpg",
   "@id": "https://vanguardlabour.com",
   "url": "https://vanguardlabour.com",
-  "telephone": "+1 (555) 382-9400",
+  "telephone": "+91 9723740019",
   "priceRange": "$$",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "104 Industrial Parkway, Suite 200",
-    "addressLocality": "Metro Industrial Area",
-    "addressRegion": "TX",
-    "postalCode": "75001",
-    "addressCountry": "US"
+    "streetAddress": "Shop No. 02, Pali Corner, Opp. Gram Panchayat",
+    "addressLocality": "Dadra",
+    "addressRegion": "Dadra & Nagar Haveli & Daman & Diu",
+    "postalCode": "396193",
+    "addressCountry": "IN"
   },
   "geo": {
     "@type": "GeoCoordinates",
-    "latitude": 32.7767,
-    "longitude": -96.7970
+    "latitude": 20.2667,
+    "longitude": 73.0167
   },
   "openingHoursSpecification": {
     "@type": "OpeningHoursSpecification",
@@ -45,14 +45,9 @@ const schemaData = {
       "Friday",
       "Saturday"
     ],
-    "opens": "06:00",
-    "closes": "19:00"
-  },
-  "serviceArea": {
-    "@type": "AdministrativeArea",
-    "name": "Regional Construction & Industrial Zone"
-  },
-  "description": "Professional manpower contractor providing skilled and general labour teams for construction, infrastructure, factories, and warehouses."
+    "opens": "08:00",
+    "closes": "20:00"
+  }
 };
 ---
 
@@ -64,18 +59,17 @@ const schemaData = {
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     
-    <!-- Primary Meta Tags -->
+    <!-- SEO Meta Tags -->
     <title>{title}</title>
-    <meta name="title" content={title} />
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalUrl} />
     
-    <!-- Open Graph / Facebook -->
+    <!-- Open Graph / Social Media -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonicalUrl} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:site_name" content="Vanguard Labour Contractor" />
+    <meta property="og:site_name" content="Aarav Enterprises" />
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />

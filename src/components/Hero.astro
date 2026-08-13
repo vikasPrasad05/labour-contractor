@@ -47,15 +47,118 @@
 
       </div>
 
-      <!-- Right Column: 3D Labourers standing cleanly on main page canvas -->
-      <div class="lg:col-span-5 flex items-center justify-center pt-4 lg:pt-0">
-        <img 
-          src="/hero_3d_labour_clean.png" 
-          alt="3D Professional Site Labourers" 
-          class="w-full max-w-md h-auto object-contain"
-        />
+      <!-- Right Column: Printed Image Slider (image2 shown first, then image1 & image3) -->
+      <div class="lg:col-span-5 flex flex-col items-center justify-center pt-4 lg:pt-0 relative group">
+        
+        <!-- Printed Slider Canvas - No Cards -->
+        <div class="relative w-full max-w-md h-72 sm:h-80 md:h-96 flex items-center justify-center overflow-hidden">
+          <!-- Image 2 (Shows First) -->
+          <img 
+            src="/image2.png" 
+            alt="Workforce Showcase 2" 
+            class="hero-slide-img absolute inset-0 w-full h-full object-contain transition-all duration-700 ease-in-out opacity-100 scale-100"
+            data-slide="0"
+          />
+          <!-- Image 1 -->
+          <img 
+            src="/image1.png" 
+            alt="Workforce Showcase 1" 
+            class="hero-slide-img absolute inset-0 w-full h-full object-contain transition-all duration-700 ease-in-out opacity-0 scale-95 pointer-events-none"
+            data-slide="1"
+          />
+          <!-- Image 3 -->
+          <img 
+            src="/image3.png" 
+            alt="Workforce Showcase 3" 
+            class="hero-slide-img absolute inset-0 w-full h-full object-contain transition-all duration-700 ease-in-out opacity-0 scale-95 pointer-events-none"
+            data-slide="2"
+          />
+        </div>
+
+        <!-- Slider Controls & Indicators -->
+        <div class="flex items-center gap-3 mt-4">
+          <!-- Prev Arrow -->
+          <button 
+            id="hero-prev-btn" 
+            class="p-1.5 rounded-full bg-zinc-100 text-zinc-700 hover:bg-amber-500 hover:text-white transition-colors cursor-pointer"
+            aria-label="Previous Slide"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+
+          <!-- Dot Indicators -->
+          <div class="flex items-center gap-2">
+            <button class="hero-dot w-6 h-2.5 rounded-full bg-amber-500 transition-all cursor-pointer" data-dot="0" aria-label="Slide 1"></button>
+            <button class="hero-dot w-2.5 h-2.5 rounded-full bg-zinc-300 transition-all cursor-pointer" data-dot="1" aria-label="Slide 2"></button>
+            <button class="hero-dot w-2.5 h-2.5 rounded-full bg-zinc-300 transition-all cursor-pointer" data-dot="2" aria-label="Slide 3"></button>
+          </div>
+
+          <!-- Next Arrow -->
+          <button 
+            id="hero-next-btn" 
+            class="p-1.5 rounded-full bg-zinc-100 text-zinc-700 hover:bg-amber-500 hover:text-white transition-colors cursor-pointer"
+            aria-label="Next Slide"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+        </div>
+
       </div>
 
     </div>
   </div>
 </section>
+
+<script>
+  let currentSlide = 0;
+  const slides = document.querySelectorAll<HTMLImageElement>('.hero-slide-img');
+  const dots = document.querySelectorAll('.hero-dot');
+  const prevBtn = document.getElementById('hero-prev-btn');
+  const nextBtn = document.getElementById('hero-next-btn');
+
+  function showSlide(index: number) {
+    if (slides.length === 0) return;
+    currentSlide = (index + slides.length) % slides.length;
+    
+    slides.forEach((img, i) => {
+      if (i === currentSlide) {
+        img.classList.remove('opacity-0', 'scale-95', 'pointer-events-none');
+        img.classList.add('opacity-100', 'scale-100');
+      } else {
+        img.classList.remove('opacity-100', 'scale-100');
+        img.classList.add('opacity-0', 'scale-95', 'pointer-events-none');
+      }
+    });
+
+    dots.forEach((dot, i) => {
+      if (i === currentSlide) {
+        dot.classList.remove('bg-zinc-300', 'w-2.5');
+        dot.classList.add('bg-amber-500', 'w-6');
+      } else {
+        dot.classList.remove('bg-amber-500', 'w-6');
+        dot.classList.add('bg-zinc-300', 'w-2.5');
+      }
+    });
+  }
+
+  prevBtn?.addEventListener('click', () => {
+    showSlide(currentSlide - 1);
+  });
+
+  nextBtn?.addEventListener('click', () => {
+    showSlide(currentSlide + 1);
+  });
+
+  dots.forEach((dot, i) => {
+    dot.addEventListener('click', () => showSlide(i));
+  });
+
+  // Auto-play slider every 4 seconds
+  setInterval(() => {
+    showSlide(currentSlide + 1);
+  }, 4000);
+</script>

@@ -1,0 +1,38 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import ContactSection from '../components/ContactSection.astro';
+import Footer from '../components/Footer.astro';
+import MobileStickyBar from '../components/MobileStickyBar.astro';
+---
+
+<Layout 
+  title="Contact Us & Request Manpower | Vanguard Labour Contractor"
+  description="Contact Vanguard Labour Contractor dispatch office. Request skilled or general manpower crews for your construction site, warehouse, or industrial facility."
+>
+  <Header />
+
+  <main id="main-content">
+    <!-- Page Header Banner -->
+    <section class="bg-zinc-900 text-white py-16 lg:py-20 border-b-4 border-amber-600 relative overflow-hidden">
+      <div class="absolute inset-0 blueprint-grid opacity-10 pointer-events-none"></div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="max-w-3xl space-y-4">
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-tight">
+            Request Manpower &<br />
+            Get a Fast Project Quote.
+          </h1>
+          <p class="text-base sm:text-lg text-zinc-300 font-normal leading-relaxed">
+            Fill out the form below or call our dispatch desk directly. We will review your site requirements and provide transparent crew rates within hours.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Contact & Requirement Form Section -->
+    <ContactSection />
+  </main>
+
+  <Footer />
+  <MobileStickyBar />
+</Layout>

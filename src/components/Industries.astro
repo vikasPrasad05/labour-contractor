@@ -1,0 +1,107 @@
+---
+const industries = [
+  {
+    name: "Commercial & Residential Construction",
+    code: "IND-01",
+    desc: "Multi-family housing, office buildings, retail complexes, and structural framing projects.",
+    badge: "Building Construction",
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5m0 0h5m-5 0V11m0 0h5M12 11H7" />`
+  },
+  {
+    name: "Infrastructure & Heavy Civil Works",
+    code: "IND-02",
+    desc: "Highways, bridges, culverts, earthworks, utility trenches, and municipal development.",
+    badge: "Civil Infrastructure",
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />`
+  },
+  {
+    name: "Manufacturing Plants & Factories",
+    code: "IND-03",
+    desc: "Assembly lines, material feeding, equipment maintenance support, and plant operations.",
+    badge: "Plant Operations",
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L5.6 15.12a2 2 0 00-1.8.572l-.7.7a2 2 0 000 2.828l2.828 2.828a2 2 0 002.828 0l.7-.7a2 2 0 00.572-1.8l-.477-2.387a6 6 0 01.517-3.86l.158-.318a6 6 0 00.517-3.86l-.477-2.387a2 2 0 00-.547-1.022L6 4" />`
+  },
+  {
+    name: "Warehousing & Supply Chain Logistics",
+    code: "IND-04",
+    desc: "Order sorting, freight loading/unloading, inventory staging, and distribution hubs.",
+    badge: "Logistics Hubs",
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />`
+  },
+  {
+    name: "Real Estate & Site Landscaping",
+    code: "IND-05",
+    desc: "Site preparation, debris removal, perimeter fencing, and initial property groundwork.",
+    badge: "Site Preparation",
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />`
+  },
+  {
+    name: "Roadworks & Civil Paving",
+    code: "IND-06",
+    desc: "Asphalt laying assistance, traffic control flaggers, curbing, and compaction support.",
+    badge: "Road & Paving",
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M13 10V3L4 14h7v7l9-11h-7z" />`
+  }
+];
+---
+
+<section id="industries" class="py-16 sm:py-20 lg:py-24 bg-white border-b border-zinc-200">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Section Header -->
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 pb-6 border-b border-zinc-200 gap-6">
+      <div class="space-y-2">
+        <span class="text-xs font-bold uppercase tracking-widest text-amber-700">SECTORS & DEPLOYMENT</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-zinc-900 tracking-tight">
+          Where Our Workforce Works
+        </h2>
+      </div>
+      <p class="text-sm text-zinc-600 max-w-md font-normal">
+        We deploy specialized crew units experienced in the exact safety standards and operational protocols of each industry sector.
+      </p>
+    </div>
+
+    <!-- Editorial List Layout (Not generic SaaS grid) -->
+    <div class="divide-y divide-zinc-200 border-t border-b border-zinc-200">
+      {industries.map((ind) => (
+        <div class="py-6 sm:py-8 flex flex-col md:flex-row md:items-center justify-between gap-6 hover:bg-zinc-50/80 px-2 sm:px-4 transition-colors group">
+          
+          <!-- Left: Code & Title -->
+          <div class="flex items-start sm:items-center gap-4 md:w-1/2">
+            <div class="w-10 h-10 shrink-0 bg-amber-50 border border-amber-300 text-amber-900 flex items-center justify-center rounded-xs group-hover:bg-amber-500 group-hover:text-white transition-colors">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" set:html={ind.icon} />
+            </div>
+            <div>
+              <div class="flex items-center gap-2 mb-1">
+                <span class="font-mono text-[10px] font-bold text-zinc-400">{ind.code}</span>
+                <span class="px-2 py-0.5 bg-zinc-100 border border-zinc-200 text-zinc-700 text-[10px] font-bold uppercase tracking-wider rounded-xs">
+                  {ind.badge}
+                </span>
+              </div>
+              <h3 class="text-lg font-bold text-zinc-900 tracking-tight group-hover:text-amber-700 transition-colors">
+                {ind.name}
+              </h3>
+            </div>
+          </div>
+
+          <!-- Middle: Description -->
+          <p class="text-sm text-zinc-600 font-normal md:w-1/3">
+            {ind.desc}
+          </p>
+
+          <!-- Right: Direct Link -->
+          <div class="md:w-auto flex items-center justify-end">
+            <a 
+              href="#contact" 
+              class="px-4 py-2 border border-zinc-300 text-xs font-bold text-zinc-800 uppercase tracking-wider rounded-xs hover:bg-zinc-900 hover:text-white hover:border-zinc-900 transition-colors"
+            >
+              Get Crew
+            </a>
+          </div>
+
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>

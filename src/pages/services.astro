@@ -1,0 +1,54 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Services from '../components/Services.astro';
+import Industries from '../components/Industries.astro';
+import Process from '../components/Process.astro';
+import CTASection from '../components/CTASection.astro';
+import Footer from '../components/Footer.astro';
+import MobileStickyBar from '../components/MobileStickyBar.astro';
+---
+
+<Layout 
+  title="Our Services | Vanguard Labour Contractor & Manpower Supply"
+  description="Comprehensive labour and manpower solutions: Construction labour, industrial plant crews, warehousing manpower, skilled tradesmen, and general helpers."
+>
+  <Header />
+
+  <main id="main-content">
+    <!-- Page Header Banner -->
+    <section class="bg-zinc-900 text-white py-16 lg:py-20 border-b-4 border-amber-600 relative overflow-hidden">
+      <div class="absolute inset-0 blueprint-grid opacity-10 pointer-events-none"></div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="max-w-3xl space-y-4">
+          <div class="inline-flex items-center gap-2 px-3 py-1 bg-amber-500/10 border border-amber-500/30 text-amber-400 rounded-xs text-xs font-mono uppercase tracking-widest">
+            <span class="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
+            MANPOWER CAPABILITIES
+          </div>
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-tight">
+            Flexible Labour Solutions<br />
+            Tailored to Your Site Scope.
+          </h1>
+          <p class="text-base sm:text-lg text-zinc-300 font-normal leading-relaxed">
+            From short-term project crews to permanent factory manpower supply, explore our complete trade offerings and industry specializations.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Component -->
+    <Services />
+
+    <!-- Industries Component -->
+    <Industries />
+
+    <!-- Deployment Process Component -->
+    <Process />
+
+    <!-- CTA Section -->
+    <CTASection />
+  </main>
+
+  <Footer />
+  <MobileStickyBar />
+</Layout>

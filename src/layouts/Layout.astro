@@ -1,0 +1,96 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+  canonicalUrl?: string;
+}
+
+const {
+  title = "Vanguard Labour Contractor & Manpower Supply | Skilled & Unskilled Workforce",
+  description = "Reliable labour contractor and manpower supply services for construction, industrial, commercial, and infrastructure projects. Fast deployment, verified compliance, and flexible workforce teams.",
+  canonicalUrl = "https://vanguardlabour.com/"
+} = Astro.props;
+
+const schemaData = {
+  "@context": "https://schema.org",
+  "@type": "GeneralContractor",
+  "name": "Vanguard Labour & Manpower Services",
+  "image": "https://vanguardlabour.com/og-image.jpg",
+  "@id": "https://vanguardlabour.com",
+  "url": "https://vanguardlabour.com",
+  "telephone": "+1 (555) 382-9400",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "104 Industrial Parkway, Suite 200",
+    "addressLocality": "Metro Industrial Area",
+    "addressRegion": "TX",
+    "postalCode": "75001",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 32.7767,
+    "longitude": -96.7970
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday"
+    ],
+    "opens": "06:00",
+    "closes": "19:00"
+  },
+  "serviceArea": {
+    "@type": "AdministrativeArea",
+    "name": "Regional Construction & Industrial Zone"
+  },
+  "description": "Professional manpower contractor providing skilled and general labour teams for construction, infrastructure, factories, and warehouses."
+};
+---
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    
+    <!-- Primary Meta Tags -->
+    <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:site_name" content="Vanguard Labour Contractor" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={canonicalUrl} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    
+    <!-- Fonts preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
+  </head>
+  <body class="bg-white text-zinc-900 font-sans antialiased selection:bg-amber-100 selection:text-amber-900 pb-16 md:pb-0">
+    <slot />
+  </body>
+</html>

@@ -1,0 +1,50 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import About from '../components/About.astro';
+import WhyChooseUs from '../components/WhyChooseUs.astro';
+import Process from '../components/Process.astro';
+import CTASection from '../components/CTASection.astro';
+import Footer from '../components/Footer.astro';
+import MobileStickyBar from '../components/MobileStickyBar.astro';
+---
+
+<Layout 
+  title="About Us | Vanguard Labour Contractor & Manpower Services"
+  description="Learn about Vanguard Labour Contractor. Over 14 years supplying dependable, vetted, and compliant workforce teams to builders, industrial facilities, and infrastructure contractors."
+>
+  <Header />
+
+  <main id="main-content">
+    <!-- Page Header Banner -->
+    <section class="bg-zinc-900 text-white py-16 lg:py-20 border-b-4 border-amber-600 relative overflow-hidden">
+      <div class="absolute inset-0 blueprint-grid opacity-10 pointer-events-none"></div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="max-w-3xl space-y-4">
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-tight">
+            Built on Reliability,<br />
+            Integrity & Compliance.
+          </h1>
+          <p class="text-base sm:text-lg text-zinc-300 font-normal leading-relaxed">
+            Since 2012, we have been the trusted manpower partner for general contractors, industrial facilities, commercial projects, and heavy infrastructure developers.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Detailed About Component -->
+    <About />
+
+    <!-- Why Choose Us Component -->
+    <WhyChooseUs />
+
+    <!-- Deployment Process Component -->
+    <Process />
+
+    <!-- CTA Section -->
+    <CTASection />
+  </main>
+
+  <Footer />
+  <MobileStickyBar />
+</Layout>

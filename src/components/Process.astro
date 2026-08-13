@@ -1,0 +1,99 @@
+---
+const steps = [
+  {
+    num: "01",
+    title: "Tell Us Your Requirement",
+    desc: "Call or submit our quick form detailing worker trades, team size, site location, and start date.",
+    detail: "Takes < 5 mins",
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />`
+  },
+  {
+    num: "02",
+    title: "We Understand the Work",
+    desc: "We review site requirements, shift timing, skill levels needed, PPE requirements, and billing rates.",
+    detail: "Clear rate quote",
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />`
+  },
+  {
+    num: "03",
+    title: "Workforce Deployment",
+    desc: "Selected workers or supervised crews arrive at your site on schedule, fully briefed and equipped.",
+    detail: "On-time arrival",
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />`
+  },
+  {
+    num: "04",
+    title: "Ongoing Coordination",
+    desc: "Our dispatch team monitors daily attendance, manages replacements if needed, and ensures smooth site progress.",
+    detail: "Continuous support",
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />`
+  }
+];
+---
+
+<section class="py-16 sm:py-20 lg:py-24 bg-white border-b border-zinc-200 relative overflow-hidden">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Section Header -->
+    <div class="max-w-2xl mb-14 space-y-2">
+      <span class="text-xs font-bold uppercase tracking-widest text-amber-700">HOW WE WORK</span>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-zinc-900 tracking-tight">
+        Simple 4-Step Process
+      </h2>
+      <p class="text-base text-zinc-600">
+        Getting the right manpower to your project shouldn't involve endless paperwork or delays.
+      </p>
+    </div>
+
+    <!-- Hand-Drawn SVG Connecting Line Layout -->
+    <div class="relative">
+      
+      <!-- Desktop SVG Connecting Path Background -->
+      <div class="hidden lg:block absolute top-1/2 left-0 right-0 -translate-y-12 -z-0 pointer-events-none">
+        <svg class="w-full h-24" viewBox="0 0 1100 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path 
+            d="M50 40 C 200 10, 300 70, 400 40 C 500 10, 600 70, 750 40 C 850 15, 950 65, 1050 40" 
+            stroke="#D97706" 
+            stroke-width="2" 
+            stroke-dasharray="6 6" 
+          />
+          <polygon points="1050,40 1040,35 1042,40 1040,45" fill="#D97706" />
+        </svg>
+      </div>
+
+      <!-- 4 Process Step Elements -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative z-10">
+        {steps.map((step, idx) => (
+          <div class="relative bg-white border border-zinc-300 p-6 rounded-xs hover:border-zinc-900 transition-colors group">
+            
+            <!-- Step Number Badge -->
+            <div class="flex items-center justify-between mb-4">
+              <span class="w-10 h-10 bg-amber-500 text-white font-mono font-extrabold text-sm flex items-center justify-center rounded-xs shadow-2xs">
+                {step.num}
+              </span>
+              <span class="text-[10px] font-mono font-bold text-amber-800 uppercase tracking-widest bg-amber-50 border border-amber-200 px-2 py-0.5 rounded-xs">
+                {step.detail}
+              </span>
+            </div>
+
+            <!-- Icon & Title -->
+            <div class="flex items-center gap-2 mb-2">
+              <svg class="w-5 h-5 text-amber-700 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" set:html={step.icon} />
+              <h3 class="text-base font-bold text-zinc-900 tracking-tight group-hover:text-amber-700 transition-colors">
+                {step.title}
+              </h3>
+            </div>
+
+            <!-- Description -->
+            <p class="text-xs text-zinc-600 font-normal leading-relaxed">
+              {step.desc}
+            </p>
+
+          </div>
+        ))}
+      </div>
+
+    </div>
+
+  </div>
+</section>

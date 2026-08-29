@@ -1,34 +1,49 @@
 ---
+const sliderImages = [
+  { src: "/images/slider/image1.png", alt: "Industrial Workforce Showcase 1" },
+  { src: "/images/slider/image2.png", alt: "Industrial Workforce Showcase 2" },
+  { src: "/images/slider/image3.png", alt: "Industrial Workforce Showcase 3" },
+  { src: "/images/slider/image4.png", alt: "Industrial Workforce Showcase 4" },
+  { src: "/images/slider/image5.png", alt: "Industrial Workforce Showcase 5" }
+];
 ---
 
-<section id="home" class="relative pt-3 pb-12 sm:pt-4 sm:pb-16 lg:pt-5 lg:pb-20 overflow-hidden border-b border-zinc-200">
+<section id="home" class="relative pt-6 pb-12 sm:pt-8 sm:pb-16 lg:pt-10 lg:pb-20 overflow-hidden border-b border-zinc-200 bg-white">
   <!-- Subtle Blueprint Grid Accent background -->
-  <div class="absolute inset-0 blueprint-grid opacity-40 pointer-events-none"></div>
+  <div class="absolute inset-0 blueprint-grid opacity-30 pointer-events-none"></div>
 
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-6 items-center">
+  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 items-center">
       
-      <!-- Left Column: Copy & Actions (Shifted Higher Up) -->
-      <div class="lg:col-span-6 space-y-4 -mt-2 lg:-mt-5">
-        
+      <!-- Left Column: Copy & Actions -->
+      <div class="lg:col-span-6 space-y-5">
+
         <!-- Main Headline -->
-        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-zinc-900 tracking-tight leading-tight">
-          Reliable Workforce.<br />
-          Ready When You Need It.
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-zinc-900 tracking-tight leading-tight">
+          Specialized Industrial Workforce.<br />
+          <span class="text-amber-600">Pharma, Moulding & Manufacturing.</span>
         </h1>
 
-        <!-- Supporting Paragraph -->
-        <p class="text-base sm:text-lg text-zinc-600 max-w-2xl font-normal leading-relaxed">
-          We provide dependable, verified labour and manpower solutions for construction site operations, industrial plants, commercial builds, and infrastructure developments. Flexible teams scaled to your timeline.
+        <!-- Supporting Paragraph (Truncated to 2 lines on mobile) -->
+        <p class="text-base sm:text-lg text-zinc-600 max-w-2xl font-normal leading-relaxed line-clamp-2-mobile">
+          We provide vetted, contract-ready manpower teams for <strong>Pharmaceutical Plants</strong>, <strong>Plastic Injection & Blow Moulding units</strong>, <strong>Medical Instrument assembly</strong>, and modern industrial facilities. Flexible shift manpower matched to your plant requirements.
         </p>
 
-        <!-- CTA Buttons & Quick Note (Hidden on mobile, visible on sm and up) -->
-        <div class="pt-1 hidden sm:flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+        <!-- Key Industry Pills (Hidden on mobile) -->
+        <div class="hidden sm:flex flex-wrap gap-2 pt-1">
+          <span class="px-3 py-1 bg-zinc-100 border border-zinc-200 text-zinc-800 text-xs font-bold rounded-xs">💊 Pharma Cleanrooms</span>
+          <span class="px-3 py-1 bg-zinc-100 border border-zinc-200 text-zinc-800 text-xs font-bold rounded-xs">⚙️ Plastic Blow Moulding</span>
+          <span class="px-3 py-1 bg-zinc-100 border border-zinc-200 text-zinc-800 text-xs font-bold rounded-xs">🔬 Medical Instruments</span>
+          <span class="px-3 py-1 bg-zinc-100 border border-zinc-200 text-zinc-800 text-xs font-bold rounded-xs">🏭 Plant Operators</span>
+        </div>
+
+        <!-- CTA Buttons (Hidden on mobile, bottom sticky bar handles mobile CTAs) -->
+        <div class="pt-2 hidden sm:flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
           <a 
             href="/contact" 
-            class="inline-flex items-center justify-center px-6 py-3.5 bg-zinc-900 text-white text-xs sm:text-sm font-bold uppercase tracking-wider rounded-xs hover:bg-amber-600 transition-colors shadow-xs group"
+            class="inline-flex items-center justify-center px-6 py-3.5 bg-zinc-900 text-white text-xs sm:text-sm font-bold uppercase tracking-wider rounded-xs hover:bg-amber-600 transition-colors shadow-sm group"
           >
-            <span>Request Manpower</span>
+            <span>Request Plant Manpower</span>
             <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
             </svg>
@@ -47,64 +62,35 @@
 
       </div>
 
-      <!-- Right Column: Printed Image Slider (Larger Images Showcase) -->
-      <div class="lg:col-span-6 flex flex-col items-center justify-center pt-2 lg:pt-0 relative group">
+      <!-- Right Column: 5-Image Interactive Slider -->
+      <div class="lg:col-span-6 flex flex-col items-center justify-center relative group">
         
-        <!-- Printed Slider Canvas - Larger Dimensions -->
-        <div class="relative w-full max-w-lg h-80 sm:h-96 lg:h-[480px] flex items-center justify-center overflow-hidden">
-          <!-- Image 2 (Shows First, slightly smaller) -->
-          <img 
-            src="/image2.png" 
-            alt="Workforce Showcase 2" 
-            class="hero-slide-img absolute inset-0 w-full h-full object-contain transition-all duration-700 ease-in-out opacity-100 scale-100 p-4 sm:p-6"
-            data-slide="0"
-          />
-          <!-- Image 1 -->
-          <img 
-            src="/image1.png" 
-            alt="Workforce Showcase 1" 
-            class="hero-slide-img absolute inset-0 w-full h-full object-contain transition-all duration-700 ease-in-out opacity-0 scale-95 pointer-events-none"
-            data-slide="1"
-          />
-          <!-- Image 3 (Slightly smaller, matching image2) -->
-          <img 
-            src="/image3.png" 
-            alt="Workforce Showcase 3" 
-            class="hero-slide-img absolute inset-0 w-full h-full object-contain transition-all duration-700 ease-in-out opacity-0 scale-95 pointer-events-none p-4 sm:p-6"
-            data-slide="2"
-          />
+        <!-- Slider Container (Clean Transparent Canvas) -->
+        <div class="relative w-full max-w-xl lg:max-w-2xl h-80 sm:h-96 lg:h-[500px] flex items-center justify-center overflow-hidden">
+          {sliderImages.map((img, index) => (
+            <div 
+              class={`hero-slide-item absolute inset-0 w-full h-full transition-all duration-700 ease-in-out ${index === 0 ? 'opacity-100 scale-100 z-10' : 'opacity-0 scale-95 pointer-events-none z-0'}`} 
+              data-slide={index}
+            >
+              <img 
+                src={img.src} 
+                alt={img.alt} 
+                class="w-full h-full object-contain scale-105"
+                loading={index === 0 ? "eager" : "lazy"}
+              />
+            </div>
+          ))}
         </div>
 
-        <!-- Slider Controls & Indicators -->
-        <div class="flex items-center gap-3 mt-3">
-          <!-- Prev Arrow -->
-          <button 
-            id="hero-prev-btn" 
-            class="p-1.5 rounded-full bg-zinc-100 text-zinc-700 hover:bg-amber-500 hover:text-white transition-colors cursor-pointer"
-            aria-label="Previous Slide"
-          >
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
-            </svg>
-          </button>
-
-          <!-- Dot Indicators -->
-          <div class="flex items-center gap-2">
-            <button class="hero-dot w-6 h-2.5 rounded-full bg-amber-500 transition-all cursor-pointer" data-dot="0" aria-label="Slide 1"></button>
-            <button class="hero-dot w-2.5 h-2.5 rounded-full bg-zinc-300 transition-all cursor-pointer" data-dot="1" aria-label="Slide 2"></button>
-            <button class="hero-dot w-2.5 h-2.5 rounded-full bg-zinc-300 transition-all cursor-pointer" data-dot="2" aria-label="Slide 3"></button>
-          </div>
-
-          <!-- Next Arrow -->
-          <button 
-            id="hero-next-btn" 
-            class="p-1.5 rounded-full bg-zinc-100 text-zinc-700 hover:bg-amber-500 hover:text-white transition-colors cursor-pointer"
-            aria-label="Next Slide"
-          >
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
-            </svg>
-          </button>
+        <!-- Dot Indicators -->
+        <div class="flex items-center gap-2 mt-4">
+          {sliderImages.map((_, index) => (
+            <button 
+              class={`hero-dot rounded-full transition-all cursor-pointer ${index === 0 ? 'w-7 h-2.5 bg-amber-500' : 'w-2.5 h-2.5 bg-zinc-300 hover:bg-zinc-400'}`} 
+              data-dot={index} 
+              aria-label={`Slide ${index + 1}`}
+            ></button>
+          ))}
         </div>
 
       </div>
@@ -115,50 +101,40 @@
 
 <script>
   let currentSlide = 0;
-  const slides = document.querySelectorAll<HTMLImageElement>('.hero-slide-img');
-  const dots = document.querySelectorAll('.hero-dot');
-  const prevBtn = document.getElementById('hero-prev-btn');
-  const nextBtn = document.getElementById('hero-next-btn');
+  const slides = document.querySelectorAll<HTMLElement>('.hero-slide-item');
+  const dots = document.querySelectorAll<HTMLElement>('.hero-dot');
 
   function showSlide(index: number) {
     if (slides.length === 0) return;
     currentSlide = (index + slides.length) % slides.length;
     
-    slides.forEach((img, i) => {
+    slides.forEach((item, i) => {
       if (i === currentSlide) {
-        img.classList.remove('opacity-0', 'scale-95', 'pointer-events-none');
-        img.classList.add('opacity-100', 'scale-100');
+        item.classList.remove('opacity-0', 'scale-95', 'pointer-events-none', 'z-0');
+        item.classList.add('opacity-100', 'scale-100', 'z-10');
       } else {
-        img.classList.remove('opacity-100', 'scale-100');
-        img.classList.add('opacity-0', 'scale-95', 'pointer-events-none');
+        item.classList.remove('opacity-100', 'scale-100', 'z-10');
+        item.classList.add('opacity-0', 'scale-95', 'pointer-events-none', 'z-0');
       }
     });
 
     dots.forEach((dot, i) => {
       if (i === currentSlide) {
-        dot.classList.remove('bg-zinc-300', 'w-2.5');
-        dot.classList.add('bg-amber-500', 'w-6');
+        dot.classList.remove('bg-zinc-300', 'hover:bg-zinc-400', 'w-2.5');
+        dot.classList.add('bg-amber-500', 'w-7');
       } else {
-        dot.classList.remove('bg-amber-500', 'w-6');
-        dot.classList.add('bg-zinc-300', 'w-2.5');
+        dot.classList.remove('bg-amber-500', 'w-7');
+        dot.classList.add('bg-zinc-300', 'hover:bg-zinc-400', 'w-2.5');
       }
     });
   }
-
-  prevBtn?.addEventListener('click', () => {
-    showSlide(currentSlide - 1);
-  });
-
-  nextBtn?.addEventListener('click', () => {
-    showSlide(currentSlide + 1);
-  });
 
   dots.forEach((dot, i) => {
     dot.addEventListener('click', () => showSlide(i));
   });
 
   // Auto-play slider every 4 seconds
-  setInterval(() => {
+  let interval = setInterval(() => {
     showSlide(currentSlide + 1);
   }, 4000);
 </script>

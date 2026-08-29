@@ -134,3 +134,13 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+
+@media (max-width: 639px) {
+  .line-clamp-2-mobile {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

@@ -1,52 +1,52 @@
 ---
 const industries = [
   {
-    name: "Commercial & Residential Construction",
+    name: "Pharmaceutical & Biotech Manufacturing",
     code: "IND-01",
-    desc: "Multi-family housing, office buildings, retail complexes, and structural framing projects.",
-    badge: "Building Construction",
-    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5m0 0h5m-5 0V11m0 0h5M12 11H7" />`
-  },
-  {
-    name: "Infrastructure & Heavy Civil Works",
-    code: "IND-02",
-    desc: "Highways, bridges, culverts, earthworks, utility trenches, and municipal development.",
-    badge: "Civil Infrastructure",
-    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />`
-  },
-  {
-    name: "Manufacturing Plants & Factories",
-    code: "IND-03",
-    desc: "Assembly lines, material feeding, equipment maintenance support, and plant operations.",
-    badge: "Plant Operations",
+    desc: "Sterile cleanroom operations, liquid bottling, tablet packing, blister packaging, and laboratory helpers.",
+    badge: "Pharma Cleanroom",
     icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L5.6 15.12a2 2 0 00-1.8.572l-.7.7a2 2 0 000 2.828l2.828 2.828a2 2 0 002.828 0l.7-.7a2 2 0 00.572-1.8l-.477-2.387a6 6 0 01.517-3.86l.158-.318a6 6 0 00.517-3.86l-.477-2.387a2 2 0 00-.547-1.022L6 4" />`
   },
   {
-    name: "Warehousing & Supply Chain Logistics",
+    name: "Plastic Injection & Blow Moulding Units",
+    code: "IND-02",
+    desc: "Moulding machine operators, bottle blow moulding, container trimming, hopper feeding, and polymer processing.",
+    badge: "Blow & Injection Moulding",
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />`
+  },
+  {
+    name: "Medical Instruments & Surgical Devices",
+    code: "IND-03",
+    desc: "Precision device assembly, surgical tool inspection, micro-component fitting, and sterile pouch sealing.",
+    badge: "Medical Assembly",
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />`
+  },
+  {
+    name: "Polymer Processing & Extrusion",
     code: "IND-04",
-    desc: "Order sorting, freight loading/unloading, inventory staging, and distribution hubs.",
-    badge: "Logistics Hubs",
-    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />`
+    desc: "Extrusion line supervision, resin mixing, granule feeding, sheet extrusion, and reel winding teams.",
+    badge: "Polymer Extrusion",
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />`
   },
   {
-    name: "Real Estate & Site Landscaping",
+    name: "Industrial Factories & Automated Lines",
     code: "IND-05",
-    desc: "Site preparation, debris removal, perimeter fencing, and initial property groundwork.",
-    badge: "Site Preparation",
-    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />`
+    desc: "Conveyor line helpers, machine feeders, shift foremen, equipment maintenance support, and assembly crews.",
+    badge: "Plant Production",
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5m0 0h5m-5 0V11m0 0h5M12 11H7" />`
   },
   {
-    name: "Roadworks & Civil Paving",
+    name: "Warehousing, QC & Dispatch Hubs",
     code: "IND-06",
-    desc: "Asphalt laying assistance, traffic control flaggers, curbing, and compaction support.",
-    badge: "Road & Paving",
-    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M13 10V3L4 14h7v7l9-11h-7z" />`
+    desc: "Quality control sorting, finished goods packaging, container loading, inventory counting, and dispatch support.",
+    badge: "QC & Dispatch",
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />`
   }
 ];
 ---
 
 <section id="industries" class="py-16 sm:py-20 lg:py-24 bg-white border-b border-zinc-200">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
     
     <!-- Section Header -->
     <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 pb-6 border-b border-zinc-200 gap-6">

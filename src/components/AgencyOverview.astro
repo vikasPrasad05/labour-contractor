@@ -1,0 +1,149 @@
+---
+const agencyStats = [
+  { value: "14+", label: "Years Agency Experience", detail: "Serving Dadra, Vapi & Industrial Hubs since 2012" },
+  { value: "500+", label: "Active On-Site Manpower", detail: "Deployed across Pharma, Moulding & Manufacturing" },
+  { value: "100%", label: "Statutory & ESI/PF Compliant", detail: "Zero client liability with full audit transparency" },
+  { value: "24-48h", label: "Emergency Crew Dispatch", detail: "Rapid deployment for unexpected production spikes" },
+];
+
+const agencyServices = [
+  {
+    category: "Pharma & Cleanroom Manpower",
+    tag: "Sterile & GMP Trained",
+    items: ["Blister & Strip Packaging Crew", "Cleanroom Assembly Assistants", "Bottle & Vial Line Operators", "Quality Inspection Helpers"],
+    badgeColor: "bg-emerald-100 text-emerald-800 border-emerald-300"
+  },
+  {
+    category: "Plastics & Moulding Agency Supply",
+    tag: "24/7 Shift Rotas",
+    items: ["Injection Moulding Machine Helpers", "Blow Moulding & Trimming Crew", "Polymer Material Handlers", "Granulation & Scrap Operators"],
+    badgeColor: "bg-amber-100 text-amber-800 border-amber-300"
+  },
+  {
+    category: "Medical Instrument & Precision Assembly",
+    tag: "High Accuracy Workforce",
+    items: ["Medical Syringe & Needle Assembly", "IV Kit Components Packing", "Sterilization Box Prep Helpers", "Micro-Assembly Sorting Crew"],
+    badgeColor: "bg-blue-100 text-blue-800 border-blue-300"
+  },
+  {
+    category: "General Plant & Logistics Staffing",
+    tag: "Scalable Sourcing",
+    items: ["Warehouse Dispatch & Stacking", "Factory Loader / Unloader Teams", "Machine Maintenance Assistants", "Industrial Housekeeping Crew"],
+    badgeColor: "bg-zinc-100 text-zinc-800 border-zinc-300"
+  }
+];
+---
+
+<section class="py-16 lg:py-24 bg-zinc-50 border-b border-zinc-200">
+  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Section Header -->
+    <div class="max-w-3xl mb-16 space-y-4">
+      <span class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-100 text-amber-900 border border-amber-200">
+        <span class="w-2 h-2 rounded-full bg-amber-600 animate-pulse"></span>
+        Licensed Manpower Agency
+      </span>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-zinc-900 leading-tight">
+        Trusted Industrial Manpower Agency & Contractor
+      </h2>
+      <p class="text-base sm:text-lg text-zinc-600 font-normal leading-relaxed">
+        Aarav Enterprises operates as a premier labor contract and manpower supply agency headquartered in Dadra (Dadra & Nagar Haveli). We specialize in sourcing, vetting, and managing dedicated industrial workforce units for manufacturing plants, pharmaceutical facilities, and polymer industries.
+      </p>
+    </div>
+
+    <!-- Agency Metrics Banner -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-20">
+      {agencyStats.map(stat => (
+        <div class="bg-white p-6 rounded-lg border border-zinc-200 shadow-xs hover:border-amber-500 transition-colors">
+          <p class="text-3xl sm:text-4xl lg:text-5xl font-black text-amber-600 mb-2 font-mono tracking-tight">{stat.value}</p>
+          <h3 class="text-sm sm:text-base font-bold text-zinc-900 leading-snug">{stat.label}</h3>
+          <p class="text-xs text-zinc-500 mt-1 leading-normal">{stat.detail}</p>
+        </div>
+      ))}
+    </div>
+
+    <!-- Agency Sourcing Categories -->
+    <div class="mb-20">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-amber-700">Specialized Staffing</span>
+          <h3 class="text-2xl sm:text-3xl font-extrabold text-zinc-900 mt-1">Our Agency Manpower Sourcing Domains</h3>
+        </div>
+        <a href="/contact" class="inline-flex items-center text-xs font-bold uppercase tracking-wider text-amber-700 hover:text-amber-800 gap-1.5">
+          Request Tailored Agency Proposal
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {agencyServices.map(service => (
+          <div class="bg-white rounded-xl border border-zinc-200 p-8 shadow-xs hover:border-zinc-300 transition-all space-y-6">
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <h4 class="text-xl font-extrabold text-zinc-900">{service.category}</h4>
+                <span class={`inline-block mt-2 px-2.5 py-0.5 text-xs font-bold rounded border ${service.badgeColor}`}>
+                  {service.tag}
+                </span>
+              </div>
+            </div>
+
+            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-zinc-700 font-medium">
+              {service.items.map(item => (
+                <li class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-amber-500 shrink-0"></span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+
+            <div class="pt-4 border-t border-zinc-100 flex items-center justify-between text-xs">
+              <span class="text-zinc-500 font-mono">Shift Rotation Ready</span>
+              <a href="/contact" class="font-bold text-zinc-900 hover:text-amber-600 transition-colors">Book Crew →</a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Agency Workflow & Onboarding -->
+    <div class="bg-zinc-900 text-white rounded-2xl p-8 sm:p-12 lg:p-16 border-2 border-amber-600 relative overflow-hidden">
+      <div class="max-w-3xl space-y-6 relative z-10">
+        <span class="text-xs font-bold uppercase tracking-widest text-amber-400">Streamlined Onboarding</span>
+        <h3 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white leading-tight">
+          How Our Manpower Agency Serves Your Industry
+        </h3>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-4">
+          <div class="space-y-2">
+            <div class="text-2xl font-black text-amber-500 font-mono">01. Need Analysis</div>
+            <p class="text-xs text-zinc-300 leading-relaxed">
+              We assess plant operational shifts, headcount requirements, skill criteria, and safety specs.
+            </p>
+          </div>
+          <div class="space-y-2">
+            <div class="text-2xl font-black text-amber-500 font-mono">02. Screening & Induction</div>
+            <p class="text-xs text-zinc-300 leading-relaxed">
+              Worker identity verification, medical fitness checkups, cleanroom SOP training, and safety briefing.
+            </p>
+          </div>
+          <div class="space-y-2">
+            <div class="text-2xl font-black text-amber-500 font-mono">03. Deployment & Management</div>
+            <p class="text-xs text-zinc-300 leading-relaxed">
+              On-site supervisor allocation, biometric shift logging, continuous performance tracking, and full compliance reporting.
+            </p>
+          </div>
+        </div>
+
+        <div class="pt-6 flex flex-wrap items-center gap-4">
+          <a href="/contact" class="px-6 py-3 bg-amber-600 text-zinc-950 font-bold text-xs uppercase tracking-wider rounded hover:bg-amber-500 transition-colors">
+            Contact Agency Dispatch
+          </a>
+          <a href="tel:+919723740019" class="px-6 py-3 border border-zinc-700 text-white font-bold text-xs uppercase tracking-wider rounded hover:bg-zinc-800 transition-colors">
+            Call +91 9723740019
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>

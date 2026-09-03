@@ -1,18 +1,17 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
-import About from '../components/About.astro';
-import WhyChooseUs from '../components/WhyChooseUs.astro';
-import Process from '../components/Process.astro';
+import AgencyOverview from '../components/AgencyOverview.astro';
 import ComplianceCertificates from '../components/ComplianceCertificates.astro';
+import WhyChooseUs from '../components/WhyChooseUs.astro';
 import CTASection from '../components/CTASection.astro';
 import Footer from '../components/Footer.astro';
 import MobileStickyBar from '../components/MobileStickyBar.astro';
 ---
 
 <Layout 
-  title="About Us | Aarav Enterprises - Industrial Manpower Contractor"
-  description="Learn about Aarav Enterprises. Supplying dependable, vetted industrial workforce teams for Pharma, Plastic Moulding, Medical Instruments, and Plant Operations."
+  title="Agency Credentials & Manpower Recruitment | Aarav Enterprises"
+  description="Explore Aarav Enterprises manpower agency services, legal compliance, EPF/ESIC statutory registration, and specialized labor supply for Pharma, Moulding, and Factory operations."
 >
   <Header />
 
@@ -22,30 +21,29 @@ import MobileStickyBar from '../components/MobileStickyBar.astro';
       <div class="absolute inset-0 blueprint-grid opacity-10 pointer-events-none"></div>
       <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div class="max-w-3xl space-y-4">
+          <span class="inline-block px-3 py-1 bg-amber-500/20 text-amber-400 border border-amber-500/30 text-xs font-mono font-bold uppercase tracking-wider rounded-xs">
+            Agency Capabilities & Sourcing
+          </span>
           <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-tight">
-            Specialized Industrial Workforce.<br />
-            Integrity, Speed & Compliance.
+            Premier Industrial Manpower Agency & Labour Contractor
           </h1>
           <p class="text-base sm:text-lg text-zinc-300 font-normal leading-relaxed">
-            Since 2012, Aarav Enterprises has been the trusted industrial contract manpower partner for Pharmaceutical manufacturing, Plastic Injection & Blow Moulding plants, Medical Instrument assembly, and industrial factories.
+            Aarav Enterprises is your strategic recruitment partner for contract labour, factory staffing, cleanroom packing, and machine maintenance teams across Dadra & Nagar Haveli, Vapi, and surrounding industrial belts.
           </p>
         </div>
       </div>
     </section>
 
-    <!-- Detailed About Component -->
-    <About />
-
-    <!-- Why Choose Us Component -->
-    <WhyChooseUs />
-
-    <!-- Deployment Process Component -->
-    <Process />
+    <!-- Comprehensive Agency Overview Component -->
+    <AgencyOverview />
 
     <!-- Official Government Registrations & Certificates -->
     <ComplianceCertificates />
 
-    <!-- CTA Section -->
+    <!-- Why Choose Us Component -->
+    <WhyChooseUs />
+
+    <!-- Call to Action -->
     <CTASection />
   </main>
 

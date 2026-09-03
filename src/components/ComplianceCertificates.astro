@@ -1,0 +1,224 @@
+---
+const certificates = [
+  {
+    id: "gst",
+    shortTitle: "GST REGISTRATION (REG-06)",
+    subtitle: "Goods & Services Tax Registration Certificate",
+    pdfUrl: "/documents/gst-registration.pdf",
+    pageCount: 3,
+    pages: [
+      "/documents/gst-page-1.png",
+      "/documents/gst-page-2.png",
+      "/documents/gst-page-3.png"
+    ]
+  },
+  {
+    id: "epf",
+    shortTitle: "EPFO CODE INTIMATION",
+    subtitle: "Employees' Provident Fund Organisation",
+    pdfUrl: "/documents/epf-intimation.pdf",
+    pageCount: 2,
+    pages: [
+      "/documents/epf-page-1.png",
+      "/documents/epf-page-2.png"
+    ]
+  },
+  {
+    id: "esic",
+    shortTitle: "ESIC REGISTRATION (C-11)",
+    subtitle: "Employees' State Insurance Corporation",
+    pdfUrl: "/documents/esic-certificate.pdf",
+    pageCount: 2,
+    pages: [
+      "/documents/esic-page-1.png",
+      "/documents/esic-page-2.png"
+    ]
+  },
+  {
+    id: "msme",
+    shortTitle: "UDYAM MSME CERTIFICATE",
+    subtitle: "Ministry of Micro, Small & Medium Enterprises",
+    pdfUrl: "/documents/udyam-msme-certificate.pdf",
+    pageCount: 5,
+    pages: [
+      "/documents/udyam-page-1.png",
+      "/documents/udyam-page-2.png",
+      "/documents/udyam-page-3.png",
+      "/documents/udyam-page-4.png",
+      "/documents/udyam-page-5.png"
+    ]
+  }
+];
+---
+
+<section class="py-12 sm:py-16 lg:py-24 bg-white border-b border-zinc-200 relative overflow-hidden blueprint-grid-light">
+  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Red Accent Top Header -->
+    <div class="max-w-3xl mb-10 sm:mb-14 space-y-2.5">
+      <div class="flex items-center gap-2.5">
+        <span class="w-7 h-1 bg-red-600 inline-block rounded-full"></span>
+        <span class="text-red-600 font-extrabold uppercase tracking-wider text-xs sm:text-sm">
+          QUALITY ASSURANCE & STATUTORY COMPLIANCE
+        </span>
+      </div>
+      
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-zinc-900 tracking-tight uppercase leading-none">
+        OUR DOCUMENTS
+      </h2>
+      
+      <p class="text-zinc-600 text-xs sm:text-base font-normal leading-relaxed max-w-2xl pt-0.5">
+        Our organization meets the highest statutory compliance and regulatory standards, backed by recognized government registrations and official documents.
+      </p>
+    </div>
+
+    <!-- Certificate Cards Grid (Responsive Grid with minimal padding & larger PDF area) -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
+      {certificates.map((cert) => (
+        <div class="bg-white border border-zinc-200 rounded-xl p-2.5 sm:p-3 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+          
+          <!-- PDF Document Viewer (Maximized area, minimal padding, no top bar) -->
+          <div>
+            <div class="border border-zinc-300 rounded-lg bg-zinc-50 p-1 h-[340px] sm:h-[380px] lg:h-[400px] overflow-y-auto relative shadow-inner group-hover:border-red-500 transition-colors">
+              <div class="space-y-1.5">
+                {cert.pages.map((imgSrc, index) => (
+                  <div class="bg-white rounded-xs shadow-2xs">
+                    <img 
+                      src={imgSrc} 
+                      alt={`${cert.shortTitle} Page ${index + 1}`} 
+                      class="w-full h-auto object-contain" 
+                      loading="lazy"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <!-- Title & Subtitle Below Document -->
+            <div class="mt-3 text-center space-y-0.5 px-1">
+              <h3 class="text-sm sm:text-base font-black text-zinc-900 uppercase tracking-tight leading-snug">
+                {cert.shortTitle}
+              </h3>
+              <p class="text-[11px] sm:text-xs text-zinc-500 font-medium leading-tight">
+                {cert.subtitle}
+              </p>
+            </div>
+          </div>
+
+          <!-- Small Red View Full Button -->
+          <button 
+            type="button"
+            data-modal-target={cert.id}
+            data-pdf-url={cert.pdfUrl}
+            data-cert-title={cert.shortTitle}
+            class="open-cert-modal w-full mt-3 py-2.5 bg-red-600 hover:bg-red-700 active:bg-red-800 text-white font-bold text-xs uppercase tracking-wider rounded-md flex items-center justify-center gap-1.5 transition-colors shadow-xs"
+          >
+            <svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+            </svg>
+            VIEW FULL
+          </button>
+
+        </div>
+      ))}
+    </div>
+
+  </div>
+
+  <!-- Responsive Full View PDF Modal -->
+  <div 
+    id="cert-modal-backdrop" 
+    class="fixed inset-0 z-50 bg-zinc-950/85 backdrop-blur-xs hidden items-center justify-center p-2 sm:p-4 overflow-y-auto"
+  >
+    <div class="bg-white rounded-xl sm:rounded-2xl max-w-4xl w-full border border-zinc-200 shadow-2xl overflow-hidden relative animate-in fade-in zoom-in duration-150">
+      
+      <!-- Modal Header -->
+      <div class="bg-zinc-900 text-white px-4 sm:px-6 py-3.5 flex items-center justify-between border-b-2 border-red-600">
+        <div class="flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+          <span id="modal-title" class="font-black text-xs sm:text-base uppercase tracking-tight text-white truncate max-w-[240px] sm:max-w-md">OFFICIAL PDF</span>
+        </div>
+        <button 
+          id="close-cert-modal" 
+          type="button" 
+          class="text-zinc-400 hover:text-white p-1 rounded-lg hover:bg-zinc-800 transition-colors shrink-0"
+          aria-label="Close modal"
+        >
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Modal Body (Full Iframe Container) -->
+      <div id="modal-body" class="p-2 sm:p-4 bg-zinc-100">
+        <div class="w-full h-[70vh] sm:h-[78vh] rounded-lg border border-zinc-300 bg-white overflow-hidden shadow-inner">
+          <iframe 
+            id="pdf-modal-iframe" 
+            src="" 
+            class="w-full h-full border-0"
+            title="Certificate PDF Document"
+          ></iframe>
+        </div>
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="bg-white border-t border-zinc-200 px-4 sm:px-6 py-3 flex items-center justify-between gap-2 text-xs">
+        <span class="text-zinc-500 text-[11px] sm:text-xs font-mono hidden sm:inline">Verified Government Document</span>
+        <a 
+          id="download-pdf-btn" 
+          href="#" 
+          download 
+          target="_blank"
+          class="px-4 py-2 bg-red-600 hover:bg-red-700 text-white font-bold uppercase tracking-wider rounded text-xs transition-colors flex items-center gap-1.5 ml-auto"
+        >
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+          Download PDF
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script is:inline>
+  const backdrop = document.getElementById('cert-modal-backdrop');
+  const modalTitle = document.getElementById('modal-title');
+  const pdfIframe = document.getElementById('pdf-modal-iframe');
+  const downloadBtn = document.getElementById('download-pdf-btn');
+  const closeBtn = document.getElementById('close-cert-modal');
+
+  document.querySelectorAll('.open-cert-modal').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const pdfUrl = btn.getAttribute('data-pdf-url');
+      const certTitle = btn.getAttribute('data-cert-title');
+
+      if (pdfUrl && backdrop && modalTitle && pdfIframe && downloadBtn) {
+        modalTitle.textContent = certTitle;
+        pdfIframe.src = pdfUrl + "#toolbar=1";
+        downloadBtn.setAttribute('href', pdfUrl);
+        backdrop.classList.remove('hidden');
+        backdrop.classList.add('flex');
+      }
+    });
+  });
+
+  if (closeBtn && backdrop && pdfIframe) {
+    closeBtn.addEventListener('click', () => {
+      backdrop.classList.add('hidden');
+      backdrop.classList.remove('flex');
+      pdfIframe.src = "";
+    });
+  }
+
+  if (backdrop && pdfIframe) {
+    backdrop.addEventListener('click', (e) => {
+      if (e.target === backdrop) {
+        backdrop.classList.add('hidden');
+        backdrop.classList.remove('flex');
+        pdfIframe.src = "";
+      }
+    });
+  }
+</script>

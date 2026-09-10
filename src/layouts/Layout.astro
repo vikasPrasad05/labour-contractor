@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import FloatingButtons from '../components/FloatingButtons.astro';
 
 interface Props {
   title?: string;
@@ -88,5 +89,6 @@ const schemaData = {
   </head>
   <body class="bg-white text-zinc-900 font-sans antialiased selection:bg-amber-100 selection:text-amber-900 pb-16 md:pb-0">
     <slot />
+    <FloatingButtons />
   </body>
 </html>

@@ -57,16 +57,16 @@ const duplicatedClients = [...clients, ...clients];
 
     <!-- Marquee Wrapper -->
     <div class="clients-marquee-wrapper relative overflow-hidden">
-      <div class="clients-marquee-track flex gap-10 sm:gap-16 items-center">
+      <div class="clients-marquee-track flex gap-4 sm:gap-10 lg:gap-16 items-center">
         {duplicatedClients.map((client) => (
           <div
-            class="clients-logo-card flex-shrink-0 flex items-center justify-center bg-white border border-zinc-200 rounded-sm px-5 py-5 w-44 sm:w-52 h-28 sm:h-32 shadow-sm hover:shadow-md hover:border-amber-300 transition-all duration-300"
+            class="clients-logo-card flex-shrink-0 flex items-center justify-center bg-white border border-zinc-200 rounded-sm px-3 py-3 sm:px-5 sm:py-5 w-28 sm:w-44 lg:w-52 h-20 sm:h-28 lg:h-32 shadow-sm hover:shadow-md hover:border-amber-300 transition-all duration-300"
             aria-label={client.alt}
           >
             <img
               src={client.logo}
               alt={client.alt}
-              class="max-h-20 sm:max-h-24 w-auto max-w-full object-contain"
+              class="max-h-12 sm:max-h-20 lg:max-h-24 w-auto max-w-full object-contain"
               loading="lazy"
               decoding="async"
             />

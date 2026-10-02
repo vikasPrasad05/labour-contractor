@@ -10,83 +10,107 @@
       <!-- LEFT COLUMN: Printed Contact Info & Trust Details -->
       <div class="lg:col-span-5 space-y-8">
         
-        <!-- Main Headline -->
-        <div class="space-y-3">
-          <h2 class="text-3xl sm:text-4xl lg:text-4xl font-extrabold tracking-tight text-zinc-900 leading-tight">
-            Have A Requirement In Mind?<br />
-            <span class="text-amber-700">Let's Get Started.</span>
-          </h2>
-          <p class="text-base text-zinc-600 leading-relaxed font-normal">
-            Tell us about your project scope, workforce trades, and site timeline. We'll provide transparent crew quotes and fast deployment.
-          </p>
+        <!-- Company & Proprietor Toggle Buttons -->
+        <div class="flex flex-wrap gap-12 mb-4">
+          <button
+            id="btn-company"
+            type="button"
+            class="contact-toggle-btn active-tab inline-flex items-center gap-2.5 px-6 py-2.5 text-sm font-bold rounded-none tracking-wide shadow-sm border transition-all duration-200 cursor-pointer bg-amber-500 border-amber-500 text-white"
+          >
+            <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21"/>
+            </svg>
+            Company
+          </button>
+          <button
+            id="btn-proprietor"
+            type="button"
+            class="contact-toggle-btn inline-flex items-center gap-2.5 px-6 py-2.5 text-sm font-bold rounded-none tracking-wide shadow-sm border transition-all duration-200 cursor-pointer bg-zinc-100 border-zinc-300 text-zinc-600"
+          >
+            <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/>
+            </svg>
+            Proprietor
+          </button>
         </div>
 
-        <!-- Feature Bullet List -->
-        <ul class="space-y-3.5 text-sm text-zinc-700 font-normal border-y border-zinc-200 py-6">
-          <li class="flex items-center gap-3">
-            <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center font-extrabold text-xs shrink-0">✓</span>
-            <span class="font-medium">Expect A Quick Response Within 2 Hours</span>
-          </li>
-          <li class="flex items-center gap-3">
-            <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center font-extrabold text-xs shrink-0">✓</span>
-            <span class="font-medium">100% Vetted Labour, Wage & Safety Compliance</span>
-          </li>
-          <li class="flex items-center gap-3">
-            <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center font-extrabold text-xs shrink-0">✓</span>
-            <span class="font-medium">Direct On-Site Supervision & Flexible Crew Scaling</span>
-          </li>
-        </ul>
+        <!-- Animated Content: Headline + Bullets + Cards -->
+        <div id="contact-full-wrapper" class="space-y-8">
 
-        <!-- Direct Contact Info Cards (Manish Singh / Prapti Enterprise) -->
-        <div class="space-y-4 pt-2">
-          
-          <!-- Contact Person & Numbers -->
-          <div class="p-4 bg-zinc-50 border border-zinc-200 rounded-lg flex items-start gap-4">
-            <div class="w-10 h-10 shrink-0 bg-amber-500 text-zinc-950 flex items-center justify-center rounded-lg font-bold text-lg">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
-              </svg>
-            </div>
-            <div>
-              <p class="text-xs font-bold text-zinc-500 uppercase tracking-wider">Direct Contact Person</p>
-              <p class="text-base font-extrabold text-zinc-900 mt-0.5">Manish Singh</p>
-              <p class="text-sm font-bold text-amber-800 mt-1 flex items-center gap-2">
-                <a href="tel:+919723740019" class="hover:underline">+91 9723740019</a> / 
-                <a href="tel:+919723740009" class="hover:underline">9723740009</a>
-              </p>
-            </div>
+          <!-- Main Headline -->
+          <div class="space-y-3">
+            <h2 class="text-3xl sm:text-4xl lg:text-4xl font-extrabold tracking-tight text-zinc-900 leading-tight">
+              Have A Requirement In Mind?<br />
+              <span class="text-amber-700">Let's Get Started.</span>
+            </h2>
+            <p class="text-base text-zinc-600 leading-relaxed font-normal">
+              Tell us about your project scope, workforce trades, and site timeline. We'll provide transparent crew quotes and fast deployment.
+            </p>
           </div>
 
-          <!-- Email -->
-          <div class="p-4 bg-zinc-50 border border-zinc-200 rounded-lg flex items-start gap-4">
-            <div class="w-10 h-10 shrink-0 bg-zinc-900 text-white flex items-center justify-center rounded-lg">
-              <svg class="w-5 h-5 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-              </svg>
-            </div>
-            <div>
-              <p class="text-xs font-bold text-zinc-500 uppercase tracking-wider">Email Inquiry</p>
-              <a href="mailto:manishsingh9723@gmail.com" class="text-sm font-bold text-zinc-900 hover:text-amber-700 transition-colors block mt-0.5 underline">
-                manishsingh9723@gmail.com
-              </a>
-            </div>
-          </div>
+          <!-- Feature Bullet List -->
+          <ul class="space-y-3.5 text-sm text-zinc-700 font-normal border-y border-zinc-200 py-6">
+            <li class="flex items-center gap-3">
+              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center font-extrabold text-xs shrink-0">✓</span>
+              <span class="font-medium">Expect A Quick Response Within 2 Hours</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center font-extrabold text-xs shrink-0">✓</span>
+              <span class="font-medium">100% Vetted Labour, Wage & Safety Compliance</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center font-extrabold text-xs shrink-0">✓</span>
+              <span class="font-medium">Direct On-Site Supervision & Flexible Crew Scaling</span>
+            </li>
+          </ul>
 
-          <!-- Office Address -->
-          <div class="p-4 bg-zinc-50 border border-zinc-200 rounded-lg flex items-start gap-4">
-            <div class="w-10 h-10 shrink-0 bg-zinc-900 text-white flex items-center justify-center rounded-lg">
-              <svg class="w-5 h-5 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-                <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
-              </svg>
+          <!-- Direct Contact Info Cards -->
+          <div class="space-y-4 pt-2">
+            
+            <!-- Contact Person & Numbers -->
+            <div class="p-4 bg-zinc-50 border border-zinc-200 rounded-lg flex items-start gap-4">
+              <div class="w-10 h-10 shrink-0 bg-amber-500 text-zinc-950 flex items-center justify-center rounded-lg font-bold text-lg">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                </svg>
+              </div>
+              <div>
+                <p id="contact-name" class="text-base font-extrabold text-zinc-900 mt-0.5">Aarav Enterprises</p>
+                <p id="contact-phone" class="text-sm font-bold text-amber-800 mt-1">
+                  <a id="contact-phone-link" href="tel:9898989898" class="hover:underline">9898989898</a>
+                </p>
+              </div>
             </div>
-            <div>
-              <p class="text-xs font-bold text-zinc-500 uppercase tracking-wider">Dispatch Office Address</p>
-              <p class="text-xs text-zinc-700 leading-relaxed font-semibold mt-0.5">
-                Shop No. 02, Pali Corner, Opp. Gram Panchayat,<br />
-                Dadra, Dadra & Nagar Haveli & Daman & Diu - 396193
-              </p>
+
+            <!-- Email -->
+            <div class="p-4 bg-zinc-50 border border-zinc-200 rounded-lg flex items-start gap-4">
+              <div class="w-10 h-10 shrink-0 bg-zinc-900 text-white flex items-center justify-center rounded-lg">
+                <svg class="w-5 h-5 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                </svg>
+              </div>
+              <div>
+                <a id="contact-email" href="mailto:demo123@gmail.com" class="text-sm font-bold text-zinc-900 hover:text-amber-700 transition-colors block mt-0.5 underline">
+                  demo123@gmail.com
+                </a>
+              </div>
             </div>
+
+            <!-- Office Address -->
+            <div class="p-4 bg-zinc-50 border border-zinc-200 rounded-lg flex items-start gap-4">
+              <div class="w-10 h-10 shrink-0 bg-zinc-900 text-white flex items-center justify-center rounded-lg">
+                <svg class="w-5 h-5 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                </svg>
+              </div>
+              <div>
+                <p id="contact-address" class="text-xs text-zinc-700 leading-relaxed font-semibold mt-0.5">
+                  Example near temple,<br />Vapi Valsad 396195
+                </p>
+              </div>
+            </div>
+
           </div>
 
         </div>
@@ -296,6 +320,77 @@
 </section>
 
 <script>
+  // ── Contact Toggle: Company / Proprietor ──────────────────────────
+  const contactData: Record<string, { name: string; phone: string; phoneHref: string; email: string; address: string }> = {
+    company: {
+      name: 'Aarav Enterprises',
+      phone: '9898989898',
+      phoneHref: 'tel:9898989898',
+      email: 'demo123@gmail.com',
+      address: 'Example near temple,<br />Vapi Valsad 396195',
+    },
+    proprietor: {
+      name: 'Manish Singh',
+      phone: '+91 9723740019 / 9723740009',
+      phoneHref: 'tel:+919723740019',
+      email: 'manishsingh9723@gmail.com',
+      address: 'Shop No. 02, Pali Corner, Opp. Gram Panchayat,<br />Dadra, Dadra &amp; Nagar Haveli &amp; Daman &amp; Diu - 396193',
+    },
+  };
+
+  const btnCompany    = document.getElementById('btn-company')    as HTMLButtonElement | null;
+  const btnProprietor = document.getElementById('btn-proprietor') as HTMLButtonElement | null;
+  const elName    = document.getElementById('contact-name')    as HTMLElement | null;
+  const elPhone   = document.getElementById('contact-phone-link') as HTMLAnchorElement | null;
+  const elEmail   = document.getElementById('contact-email')   as HTMLAnchorElement | null;
+  const elAddress = document.getElementById('contact-address') as HTMLElement | null;
+
+  const cardsWrapper = document.getElementById('contact-full-wrapper') as HTMLElement | null;
+
+  const ACTIVE   = ['bg-amber-500', 'border-amber-500', 'text-white'];
+  const INACTIVE = ['bg-zinc-100',  'border-zinc-300',  'text-zinc-600'];
+
+  function switchContact(type: 'company' | 'proprietor') {
+    if (!cardsWrapper) return;
+
+    // Step 1: Fade out + slide up
+    cardsWrapper.style.transition = 'opacity 0.2s ease, transform 0.2s ease';
+    cardsWrapper.style.opacity = '0';
+    cardsWrapper.style.transform = 'translateY(-8px)';
+
+    setTimeout(() => {
+      const d = contactData[type];
+      if (elName)    elName.textContent = d.name;
+      if (elPhone)  { elPhone.textContent = d.phone; elPhone.href = d.phoneHref; }
+      if (elEmail)  { elEmail.textContent = d.email; elEmail.href = `mailto:${d.email}`; }
+      if (elAddress) elAddress.innerHTML = d.address;
+
+      // Step 2: Fade in + slide down
+      cardsWrapper.style.transform = 'translateY(6px)';
+      requestAnimationFrame(() => {
+        cardsWrapper.style.transition = 'opacity 0.25s ease, transform 0.25s ease';
+        cardsWrapper.style.opacity = '1';
+        cardsWrapper.style.transform = 'translateY(0)';
+      });
+    }, 200);
+
+    // Button active state
+    if (type === 'company') {
+      btnCompany?.classList.add(...ACTIVE);
+      btnCompany?.classList.remove(...INACTIVE);
+      btnProprietor?.classList.add(...INACTIVE);
+      btnProprietor?.classList.remove(...ACTIVE);
+    } else {
+      btnProprietor?.classList.add(...ACTIVE);
+      btnProprietor?.classList.remove(...INACTIVE);
+      btnCompany?.classList.add(...INACTIVE);
+      btnCompany?.classList.remove(...ACTIVE);
+    }
+  }
+
+  btnCompany?.addEventListener('click',    () => switchContact('company'));
+  btnProprietor?.addEventListener('click', () => switchContact('proprietor'));
+
   // Handle Service Chips selection
   const serviceBtns = document.querySelectorAll('.chip-btn');
   const serviceInput = document.getElementById('selected-service-input') as HTMLInputElement | null;
